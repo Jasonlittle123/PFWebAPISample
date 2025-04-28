@@ -1,5 +1,241 @@
 ﻿@page "/"
+<div class="main-container">
+    <header class="top-nav">
+        <div class="logo">Agapay</div>
+        <nav class="nav-links">
+            <a href="#">Platform</a>
+            <a href="#">Features</a>
+            <a href="#">How it works</a>
+        </nav>
+        <div class="right-buttons">
+            <button class="get-app">Get The App</button>
+            <button class="menu-icon">☰</button>
+        </div>
+    </header>
+    <section class="hero-section">
+        <div class="hero-content">
+            <p class="small-intro">Explore a 14-day <span class="highlight">free trial</span></p>
+            <h1>Emergency<br> Preparedness<br> Platform</h1>
+            <div class="hero-buttons">
+                <button class="primary-btn">Try us for free</button>
+                <button class="secondary-btn">See demo</button>
+            </div>
+            <div class="stats-box">
+                <h2>1 million+</h2>
+                <p>Quezon city Families, safer every year through Agapay</p>
+            </div>
+        </div>
+        <div class="hero-image-area">
+            <div class="info-card">
+                <p>Stay prepared for any disaster with Agapay</p>
+            </div>
+            <img src="https://via.placeholder.com/350" class="hero-image" alt="Agapay Hero" />
+            <div class="downloads-counter">
+                <h3>70k+</h3>
+                <p>Downloads</p>
+            </div>
+        </div>
+    </section>
+    <section class="features-section">
+        <div class="feature">
+            <h4>Family Plans</h4>
+            <p>Create custom evacuation and emergency plans for your loved ones.</p>
+        </div>
+        <div class="feature">
+            <h4>Real-time Alerts</h4>
+            <p>Get notified instantly about earthquakes, typhoons, and emergencies.</p>
+        </div>
+        <div class="feature">
+            <h4>Resource Locator</h4>
+            <p>Find the nearest hospitals, evacuation centers, and supplies.</p>
+        </div>
+    </section>
+</div>
+<style>
 
-<h1>Hello, world!</h1>
+    
 
-Welcome to your new app.
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #1e1b32;
+        color: white;
+    }
+
+    
+
+    .main-container {
+        max-width: 1300px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    
+
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #6c63ff;
+    }
+
+    .nav-links a {
+        margin: 0 15px;
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    .right-buttons {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .get-app {
+        background: white;
+        color: #1e1b32;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .menu-icon {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    
+
+    .hero-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px 0;
+    }
+
+    .hero-content {
+        max-width: 50%;
+    }
+
+    .small-intro {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .highlight {
+        color: #6c63ff;
+        font-weight: bold;
+    }
+
+    h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin: 20px 0;
+    }
+
+    .hero-buttons {
+        margin: 25px 0;
+        display: flex;
+        gap: 20px;
+    }
+
+    .primary-btn {
+        background-color: #6c63ff;
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .secondary-btn {
+        background: none;
+        border: 1px solid white;
+        padding: 12px 25px;
+        border-radius: 25px;
+        color: white;
+        cursor: pointer;
+    }
+
+    
+
+    .stats-box {
+        background: linear-gradient(145deg, #2e2a4b, #1e1b32);
+        padding: 20px;
+        border-radius: 20px;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    
+
+    .hero-image-area {
+        position: relative;
+        max-width: 40%;
+    }
+
+    .hero-image {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .info-card {
+        background: #6c63ff;
+        padding: 10px 20px;
+        border-radius: 15px;
+        position: absolute;
+        top: -30px;
+        left: -20px;
+        color: white;
+        font-weight: bold;
+    }
+
+    .downloads-counter {
+        position: absolute;
+        bottom: -40px;
+        right: 0;
+        background: #2e2a4b;
+        padding: 10px 20px;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    
+
+    .features-section {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+    }
+
+    .feature {
+        background: linear-gradient(145deg, #2e2a4b, #1e1b32);
+        padding: 20px;
+        border-radius: 20px;
+        width: 30%;
+        text-align: center;
+    }
+
+        .feature h4 {
+            margin-bottom: 10px;
+            color: #6c63ff;
+        }
+</style>
+
+@code {
+
+
+
+} 
