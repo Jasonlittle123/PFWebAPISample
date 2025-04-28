@@ -68,4 +68,12 @@
       <Folder Include="wwwroot\js\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <MauiImage Include="wwwroot\img\stella.jpg" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="wwwroot\img\stella.jpg" />
+    </ItemGroup>
+
 </Project>

@@ -1,6 +1,239 @@
 ﻿@page "/messages"
-<h3>Messages</h3>
 
-@code {
+<div class="container">
+    <div class="sidebar">
+        <div class="search">
+            <input type="text" placeholder="Search Message" />
+        </div>
+        <div class="online-now">
+            <p>Online Now</p>
+            <div class="avatars">
+                    <img src="img/stella.jpg" class="avatar"/>
+                    <img src="img/oliver.jpg" class="avatar"/>
+                    <img src="img/joshua.jpg" class="avatar" />
+                    <img src="img/mary.jpg" class="avatar" />
+                    <img src="img/rose.jpg" class="avatar" />
+            </div>
+        </div>
+		<div class="all-messages">
+			
+            <p>All Messages</p>
+            <div class="message-item active">
+                <img src="img/stella.jpg" class="avatar" />
+                <div>
+                    <p>Stella Evergreen</p>
+                    <small>I hope this message finds you...</small>
+                </div>
+            </div>
+            <div class="message-item">
+                <img src="img/oliver.jpg" class="avatar" />
+                <div>
+                    <p>Oliver Crestwood</p>
+                    <small>Wishing you a fantastic day...</small>
+                </div>
+            </div>
+        </div>
+    </div>
 
-}
+    <div class="chat">
+        <div class="chat-header">
+            <img src="img/stella.jpg" class="avatar" />
+            <div>
+                <p>Stella Evergreen</p>
+                <small>stellaevergreen@gmail.com</small>
+            </div>
+        </div>
+
+        <div class="chat-body">
+            <div class="message from-them">
+                Hi Stella! Have you seen the email I sent you?
+            </div>
+            <div class="message from-me">
+                Yes, I am actually working on it right now. My apologies for not keeping you updated
+            </div>
+            <div class="message from-them">
+                No worries, just want to check on you. Take your time!
+            </div>
+        </div>
+
+        <div class="chat-footer">
+            <input type="text" placeholder="Type your message" />
+            <button>Send Message</button>
+        </div>
+    </div>
+
+    <div class="profile">
+        <img src="img/stella.jpg" class="avatar-large" />
+        <h3>Stella Evergreen</h3>
+        <p>stellaevergreen@gmail.com</p>
+        <button class="primary-btn">View Profile</button>
+
+        <div class="about">
+            <h4>About</h4>
+            <p>Creative alchemist merging form and function...</p>
+        </div>
+
+        <div class="personal-info">
+            <h4>Personal Information</h4>
+            <p><b>Nickname:</b> Kuku</p>
+            <p><b>Phone:</b> 001 123 1234567</p>
+            <p><b>DOB:</b> March 12, 1997</p>
+            <p><b>Gender:</b> Female</p>
+            <p><b>Language:</b> English</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .container {
+        display: flex;
+        height: 85vh;
+        background: #1c1b29;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    .sidebar {
+        width: 20%;
+        background: #272636;
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+    .chat {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        background: #2d2b43;
+    }
+
+    .profile {
+        width: 30%;
+        background: #272636;
+        padding: 20px;
+        overflow-y: auto;
+    }
+    .primary-btn
+    {
+        background: none;
+        border: 1px solid white;
+        padding: 12px 25px;
+        border-radius: 25px;
+        color: white;
+    }
+
+    .search input {
+        width: 100%;
+        padding: 8px;
+        border-radius: 8px;
+        border: none;
+    }
+
+    .online-now {
+        margin-top: 20px;
+    }
+
+    .avatars {
+        display: flex;
+        gap: 10px;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .avatar-large {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    .all-messages {
+        margin-top: 20px;
+    }
+
+    .message-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+        cursor: pointer;
+    }
+
+        .message-item.active {
+            background: #3a3859;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+    .chat-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 20px;
+        border-bottom: 1px solid #444;
+    }
+
+    .chat-body {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+    .message {
+        background: #3a3859;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        max-width: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .from-me {
+        margin-left: 280px;
+        background: #6c63ff;
+    }
+
+    .from-them {
+        align-self: flex-end;
+        background: #3a3859;
+    }
+
+
+    .voice-message audio {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .chat-footer {
+        padding: 20px;
+        border-top: 1px solid #444;
+        display: flex;
+        gap: 10px;
+    }
+
+        .chat-footer input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .chat-footer button {
+            background: #6c63ff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+        }
+
+    .about, .personal-info {
+        margin-top: 20px;
+    }
+</style>
+
